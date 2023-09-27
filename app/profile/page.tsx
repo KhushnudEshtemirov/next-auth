@@ -3,15 +3,18 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const PrivatePage = () => {
-  const router = useRouter();
+const Profile = () => {
   const { data: session, status } = useSession();
-
-  console.log(session);
+  const router = useRouter();
 
   if (status === "unauthenticated") router.push("/auth/signin");
 
-  return <h1>This is private page!!!</h1>;
+  return (
+    <>
+      <h1>Profile Page (private)</h1>
+      <h2>You signed in as {session?.user?.name}</h2>
+    </>
+  );
 };
 
-export default PrivatePage;
+export default Profile;

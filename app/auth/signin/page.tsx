@@ -1,9 +1,11 @@
 "use client";
 
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const SignIn = () => {
+  const router = useRouter();
   const [user, setUser] = useState({ email: "", password: "" });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -15,7 +17,11 @@ const SignIn = () => {
       redirect: false,
     });
 
-    console.log(res);
+    if (!res?.error) {
+      router.push("/profile");
+    } else {
+      console.log(res.error);
+    }
   };
 
   return (
