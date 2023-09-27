@@ -2,13 +2,8 @@ import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 const options: NextAuthOptions = {
-  session: {
-    strategy: "jwt",
-  },
-
   providers: [
     CredentialsProvider({
-      name: "credentials",
       credentials: {},
 
       async authorize(credentials) {
