@@ -4,16 +4,18 @@ import { signIn } from "next-auth/react";
 import { useState } from "react";
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({ email: "", password: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    signIn("credentials", {
-      email,
-      password,
+    const res = await signIn("credentials", {
+      email: user.email,
+      password: user.password,
+      redirect: false,
     });
+
+    console.log(res);
   };
 
   return (
@@ -26,7 +28,7 @@ const SignIn = () => {
         <input
           type="email"
           className="border mt-1 outline-none ml-3 px-2 py-1 rounded"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={({ target }) => setUser({ ...user, email: target.value })}
         />
       </label>
       <label>
@@ -34,7 +36,9 @@ const SignIn = () => {
         <input
           type="password"
           className="border mt-1 outline-none ml-3 px-2 py-1 rounded"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={({ target }) =>
+            setUser({ ...user, password: target.value })
+          }
         />
       </label>
       <button
