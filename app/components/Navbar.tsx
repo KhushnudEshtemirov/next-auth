@@ -17,9 +17,18 @@ const Navbar = () => {
           <Link href="/profile">Profile</Link>
         </li>
         <li>
+          <Link href="/admin">Admin</Link>
+        </li>
+        <li>
           <Link href="/auth/signin">Sign In</Link>
         </li>
-        <li className="cursor-pointer" onClick={() => signOut()}>
+        <li
+          className="cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            if (window.confirm("Are you sure quit?")) signOut();
+          }}
+        >
           Sign Out
         </li>
       </ul>

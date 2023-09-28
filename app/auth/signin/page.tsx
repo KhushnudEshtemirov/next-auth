@@ -1,30 +1,44 @@
 "use client";
 
-import { signIn } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const SignIn = () => {
   const router = useRouter();
+  const { data: session } = useSession();
+
   const [user, setUser] = useState({ email: "", password: "" });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await signIn("credentials", {
+    await signIn("credentials", {
       email: user.email,
       password: user.password,
       redirect: false,
+    }).then((res) => {
+      if (!res?.error) {
+        router.push("/profile");
+      } else {
+        console.log(res.error);
+      }
     });
-
-    if (!res?.error) {
-      router.push("/profile");
-    } else {
-      console.log(res.error);
-    }
   };
 
-  return (
+  return session ? (
+    <h1>
+      You already signed in!{" "}
+      <span
+        className="cursor-pointer text-blue-600"
+        onClick={() => {
+          if (window.confirm("Are you sure quit?")) signOut();
+        }}
+      >
+        Sign out
+      </span>
+    </h1>
+  ) : (
     <form
       onSubmit={handleSubmit}
       className="flex bg-gray-300 flex-col gap-5 w-1/3 py-8 justify-center items-center"
