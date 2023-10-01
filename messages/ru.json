@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Домашняя страница",
+    "blogs": "Блоги",
+    "profile": "Профиль",
+    "admin": "Админ",
+    "signIn": "Авторизоваться",
+    "signOut": "Выйти",
+    "areYouSure": "Вы действительно хотите выйти?"
+  },
+  "home": {
+    "homePage": "Домашняя страница"
+  },
+  "blogs": {
+    "blogsPage": "Блоги страница"
+  },
+  "profile": {
+    "profilePage": "Пользователь страница"
+  },
+  "admin": {
+    "adminPage": "Админ страница"
+  },
+  "signIn": {
+    "signInPage": "Войти",
+    "email": "Введите email",
+    "password": "Введите пароль",
+    "alreadySignIn": "Вы уже вошли в систему",
+    "signOut": "Выйти"
+  }
+}

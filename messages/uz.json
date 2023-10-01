@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Bosh sahifa",
+    "blogs": "Yangiliklar",
+    "profile": "Profil",
+    "admin": "Administrator",
+    "signIn": "Kirish",
+    "signOut": "Chiqish",
+    "areYouSure": "Chiqishga ishonchingiz komilmi?"
+  },
+  "home": {
+    "homePage": "Bosh sahifa"
+  },
+  "blogs": {
+    "blogsPage": "Yangiliklar sahifasi"
+  },
+  "profile": {
+    "profilePage": "Foydalanuvchi sahifasi"
+  },
+  "admin": {
+    "adminPage": "Administrator sahifasi"
+  },
+  "signIn": {
+    "signInPage": "Kirish",
+    "email": "Emailni kiriting",
+    "password": "Parolni kiriting",
+    "alreadySignIn": "Siz allaqachon kirgansiz.",
+    "signOut": "Chiqish"
+  }
+}

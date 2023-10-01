@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Home page",
+    "blogs": "Blogs",
+    "profile": "Profile",
+    "admin": "Admin",
+    "signIn": "Login",
+    "signOut": "Sign out",
+    "areYouSure": "Are you sure you want to log out?"
+  },
+  "home": {
+    "homePage": "Home page"
+  },
+  "blogs": {
+    "blogsPage": "Blogs page"
+  },
+  "profile": {
+    "profilePage": "User page"
+  },
+  "admin": {
+    "adminPage": "Admin page"
+  },
+  "signIn": {
+    "signInPage": "Login",
+    "email": "Enter email",
+    "password": "Enter password",
+    "alreadySignIn": "You already signed in.",
+    "signOut": "Sign out"
+  }
+}
