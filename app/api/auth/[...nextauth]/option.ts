@@ -14,7 +14,8 @@ const options: NextAuthOptions = {
 
         if (email === "khushnud@gmail.com" && password === "333")
           return { id: "7", name: "Khushnud", email: "khushnud@gmail.com" };
-        else throw new Error("Login or password is incorrect!");
+
+        return null;
       },
     }),
   ],
