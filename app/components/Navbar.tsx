@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link href="/admin">{t("admin")}</Link>
         </li>
         <li>
-          <Link href="/auth/signin">{t("signIn")}</Link>
+          <Link href="/signin">{t("signIn")}</Link>
         </li>
         <li
           className="cursor-pointer"

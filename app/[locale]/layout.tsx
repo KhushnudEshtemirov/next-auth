@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 import Navbar from "../components/Navbar";
 import AuthProvider from "../context/AuthProvider";
 
+import "./style.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 type Props = {

@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 
 const locales = ["uz", "en", "ru"];
 
-const publicPages = ["/", "/blogs"];
+const publicPages = ["/", "/signin", "/blogs"];
 
 const intlMiddleware = createIntlMiddleware({
   locales,
@@ -19,6 +19,8 @@ export default function middleware(req: NextRequest) {
     "i"
   );
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
+
+  console.log(publicPathnameRegex, "Req: ", req.nextUrl.pathname, isPublicPage);
 
   if (isPublicPage) {
     return intlMiddleware(req);

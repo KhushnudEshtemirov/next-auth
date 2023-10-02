@@ -1,10 +1,12 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const SignIn = () => {
+  const t = useTranslations("signIn");
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -28,14 +30,14 @@ const SignIn = () => {
 
   return session ? (
     <h1>
-      You already signed in!{" "}
+      {t("alreadySignIn")}{" "}
       <span
         className="cursor-pointer text-blue-600"
         onClick={() => {
           if (window.confirm("Are you sure quit?")) signOut();
         }}
       >
-        Sign out
+        {t("signOut")}
       </span>
     </h1>
   ) : (
@@ -44,7 +46,7 @@ const SignIn = () => {
       className="flex bg-gray-300 flex-col gap-5 w-1/3 py-8 justify-center items-center"
     >
       <label>
-        Enter your email
+        {t("email")}
         <input
           type="email"
           className="border mt-1 outline-none ml-3 px-2 py-1 rounded"
@@ -52,7 +54,7 @@ const SignIn = () => {
         />
       </label>
       <label>
-        Enter your password
+        {t("password")}
         <input
           type="password"
           className="border mt-1 outline-none ml-3 px-2 py-1 rounded"
@@ -65,7 +67,7 @@ const SignIn = () => {
         type="submit"
         className="bg-green-400 hover:bg-green-500 duration-100 text-white px-5 py-2 font-semibold rounded"
       >
-        Login
+        {t("signInPage")}
       </button>
     </form>
   );
