@@ -1,5 +1,11 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 const Admin = () => {
-  return <h1>Admin Page</h1>;
+  const t = useTranslations("admin");
+
+  return <h1>{t("adminPage")}</h1>;
 };
 
 export default Admin;

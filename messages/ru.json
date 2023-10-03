@@ -15,7 +15,8 @@
     "blogsPage": "Блоги страница"
   },
   "profile": {
-    "profilePage": "Пользователь страница"
+    "profilePage": "Пользователь страница",
+    "signedInAs": "Вы вошли в систему как"
   },
   "admin": {
     "adminPage": "Админ страница"

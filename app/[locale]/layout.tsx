@@ -26,7 +26,7 @@ export async function generateStaticParams() {
   return [{ locale: "uz" }, { locale: "en" }, { locale: "ru" }];
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale },
 }: Props) {

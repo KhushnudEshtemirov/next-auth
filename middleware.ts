@@ -20,8 +20,6 @@ export default function middleware(req: NextRequest) {
   );
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
 
-  console.log(publicPathnameRegex, "Req: ", req.nextUrl.pathname, isPublicPage);
-
   if (isPublicPage) {
     return intlMiddleware(req);
   } else {

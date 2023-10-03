@@ -15,7 +15,8 @@
     "blogsPage": "Yangiliklar sahifasi"
   },
   "profile": {
-    "profilePage": "Foydalanuvchi sahifasi"
+    "profilePage": "Foydalanuvchi sahifasi",
+    "signedInAs": "Siz sifatida kirgansiz"
   },
   "admin": {
     "adminPage": "Administrator sahifasi"

@@ -15,7 +15,8 @@
     "blogsPage": "Blogs page"
   },
   "profile": {
-    "profilePage": "User page"
+    "profilePage": "User page",
+    "signedInAs": "You signed in as"
   },
   "admin": {
     "adminPage": "Admin page"
