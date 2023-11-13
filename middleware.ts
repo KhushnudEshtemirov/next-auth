@@ -14,6 +14,7 @@ const intlMiddleware = createIntlMiddleware({
 const authMiddleware = withAuth((req) => intlMiddleware(req));
 
 export default function middleware(req: NextRequest) {
+  console.log(process.env.NEXT_PUBLIC_BASE_URL);
   const publicPathnameRegex = RegExp(
     `^(/(${locales.join("|")}))?(${publicPages.join("|")})?/?$`,
     "i"
