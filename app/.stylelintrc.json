@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "alpha-value-natation": "number",
+    "color-no-hex": true
+  }
+}
